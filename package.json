@@ -1,0 +1,22 @@
+{
+  "name": "gckey",
+  "version": "1.0.0",
+  "description": "Simple native utility useful for verifying that an object really did gc",
+  "main": "index.js",
+  "dependencies": {
+    "napi-macros": "^1.3.0",
+    "node-gyp-build": "^3.3.0"
+  },
+  "devDependencies": {
+    "prebuildify": "^2.6.0",
+    "standard": "^11.0.1",
+    "tape": "^4.9.0"
+  },
+  "scripts": {
+    "install": "node-gyp-build",
+    "test": "node --expose-gc test/simple.js",
+    "prebuild": "prebuildify --napi"
+  },
+  "author": "James M Snell <jasnell@gmail.com>",
+  "license": "MIT"
+}
